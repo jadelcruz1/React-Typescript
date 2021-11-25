@@ -23,11 +23,9 @@ class App extends Component {
         <h1>Listar os Personagens</h1>
         {filmes.map(filme => (
           <li key={filme}>
-            
-            <p>
-              {filme.img}
-            </p>
 
+              <img src={filme.img} />            
+            
             <p>
               <strong></strong>
               {filme. name}
