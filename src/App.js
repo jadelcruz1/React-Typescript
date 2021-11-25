@@ -22,26 +22,30 @@ class App extends Component {
       <div>
         <h1>Listar os Personagens</h1>
         {filmes.map(filme => (
-          <li key={filme}>
 
-              <img src={filme.img} />            
-            
-            <p>
-              <strong></strong>
-              {filme. name}
-            </p>
+          <ul>    
 
-            <p>
-              {filme. gender}
-            </p>
 
-            <p>
-              {filme. description}
-            </p>
+                <li key={filme}>
 
-           
+                    <img src={filme.img} />            
+                  
+                  <p>
+                    <strong></strong>
+                    {filme. name}
+                  </p>
 
-          </li>
+                  <p>
+                    {filme. gender}
+                  </p>
+
+                  <p>
+                    {filme. description}
+                  </p>
+
+                </li>
+
+             </ul> 
         ))}
       </div>
     );
