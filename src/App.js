@@ -10,7 +10,7 @@ class App extends Component {
 
   async componentDidMount() {
     const response = await Personagens.get('');
-      console.log(response.data)
+      //console.log(response.data)
 
     this.setState({ filmes: response.data });
   }
@@ -22,13 +22,14 @@ class App extends Component {
     return (
       <section> 
 
-          <h1 className={styles.navbar}>Psychonauts Ninjas Warrios</h1>
+          <h1 className={styles.navbar}>Psychonauts NinjasWarrios</h1>
+          {console.log(filmes)}
 
           <div className={styles.list} >
             
             {filmes.map(filme => (
 
-              <ul>    
+              <ul id={styles.lista}>
 
 
                     <li key={filme}>
@@ -51,6 +52,7 @@ class App extends Component {
                     </li>
 
                 </ul> 
+
             ))}
             </div>
       </section> 
