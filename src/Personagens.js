@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-const api = axios.create({
+const Personagens = axios.create({
     baseURL: 'https://psychonauts-api.herokuapp.com/api/characters?limit=50'
     
 });
 
-export default api;
+export default Personagens;

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import api from './api';
+import Personagens from './Personagens'
+import styles from './Layout/Personagens.module.css'
 
 class App extends Component {
 
@@ -8,7 +9,7 @@ class App extends Component {
   }
 
   async componentDidMount() {
-    const response = await api.get('');
+    const response = await Personagens.get('');
       console.log(response.data)
 
     this.setState({ filmes: response.data });
@@ -19,35 +20,40 @@ class App extends Component {
     const { filmes } = this.state;
 
     return (
-      <div>
-        <h1>Listar os Personagens</h1>
-        {filmes.map(filme => (
+      <section> 
 
-          <ul>    
+          <h1 className={styles.navbar}>Psychonauts Ninjas Warrios</h1>
+
+          <div className={styles.list} >
+            
+            {filmes.map(filme => (
+
+              <ul>    
 
 
-                <li key={filme}>
+                    <li key={filme}>
 
-                    <img src={filme.img} />            
-                  
-                  <p>
-                    <strong></strong>
-                    {filme. name}
-                  </p>
+                        <img src={filme.img} />            
+                      
+                      <p>
+                        <strong></strong>
+                        {filme. name}
+                      </p>
 
-                  <p>
-                    {filme. gender}
-                  </p>
+                      <p>
+                        {filme. gender}
+                      </p>
 
-                  <p>
-                    {filme. description}
-                  </p>
+                      <p>
+                        {filme. description}
+                      </p>
 
-                </li>
+                    </li>
 
-             </ul> 
-        ))}
-      </div>
+                </ul> 
+            ))}
+            </div>
+      </section> 
     );
   };
 };
