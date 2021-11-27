@@ -20,12 +20,12 @@ class App extends Component {
     const { filmes } = this.state;
 
     return (
-      <container  > 
-        <cardList>
+      <container className={styles.CardList} > 
+        
         {filmes.map(filme => (
           <card  key={filme.id}>
 
-              <div>
+              <div className={styles.Card}>
 
                 <p>  <img src={filme.img} /></p>
 
@@ -39,7 +39,7 @@ class App extends Component {
             </card>
           ))};
 
-        </cardList>
+        
       </container>  
       
       
