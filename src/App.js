@@ -10,7 +10,7 @@ class App extends Component {
 
   async componentDidMount() {
     const response = await Personagens.get('');
-      //console.log(response.data)
+      console.log(response.data)
 
     this.setState({ filmes: response.data });
   }
@@ -20,14 +20,14 @@ class App extends Component {
     const { filmes } = this.state;
 
     return (
-      <container className={styles.CardList} > 
+      <div className={styles.CardList} > 
         
         {filmes.map(filme => (
           <card  key={filme.id}>
 
               <div className={styles.Card}>
 
-                <p>  <img src={filme.img} /></p>
+                <p > <img className={styles.img} src={filme.img} /></p>
 
                 <h2> {filme. name}</h2>
 
@@ -40,7 +40,7 @@ class App extends Component {
           ))};
 
         
-      </container>  
+      </div>  
       
       
      
