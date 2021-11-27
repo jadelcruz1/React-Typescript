@@ -7,3 +7,6 @@ Rodar o projeto React
 
 Instalar o axios
 ### `npm install --save axios`
+
+treino react js e consumindo API restfull.
+melhorar as imagens, colocar botao de busca e favoritos.
