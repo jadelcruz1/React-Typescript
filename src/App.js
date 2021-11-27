@@ -20,42 +20,31 @@ class App extends Component {
     const { filmes } = this.state;
 
     return (
-      <section> 
+      <container  > 
+        <cardList>
+        {filmes.map(filme => (
+          <card  key={filme.id}>
 
-          <h1 className={styles.navbar}>Psychonauts NinjasWarrios</h1>
-          {console.log(filmes)}
+              <div>
 
-          <div className={styles.list} >
-            
-            {filmes.map(filme => (
+                <p>  <img src={filme.img} /></p>
 
-              <ul id={styles.lista}>
+                <h2> {filme. name}</h2>
+
+                <p> {filme. description}</p>
+
+              </div>
 
 
-                    <li key={filme}>
+            </card>
+          ))};
 
-                        <img src={filme.img} />            
-                      
-                      <p>
-                        <strong></strong>
-                        {filme. name}
-                      </p>
-
-                      <p>
-                        {filme. gender}
-                      </p>
-
-                      <p>
-                        {filme. description}
-                      </p>
-
-                    </li>
-
-                </ul> 
-
-            ))}
-            </div>
-      </section> 
+        </cardList>
+      </container>  
+      
+      
+     
+      
     );
   };
 };
